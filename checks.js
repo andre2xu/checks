@@ -47,3 +47,17 @@ export function checkIfNegativeNumber(arg) {
         throw TypeError("Not a negative number.");
     }
 };
+
+
+
+export function isZero(arg) {
+    return arg === 0;
+};
+
+export function checkIfZero(arg) {
+    checkIfNumber(arg);
+
+    if (isZero(arg) === false) {
+        throw TypeError("Not zero");
+    }
+};
