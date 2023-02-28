@@ -85,3 +85,21 @@ export function checkIfFunction(arg) {
         throw TypeError("Not a function");
     }
 };
+
+
+
+export function isClass(arg) {
+    const DESCRIPTORS = Object.getOwnPropertyDescriptors(arg);
+
+    if (DESCRIPTORS.prototype !== undefined && DESCRIPTORS.prototype.writable === false) {
+        return true;
+    }
+
+    return false;
+};
+
+export function checkIfClass(arg) {
+    if (isClass(arg) === false) {
+        throw TypeError("Not a class");
+    }
+};
