@@ -140,6 +140,24 @@ export function checkIfArray(arg) {
 
 
 
+export function arrayHasXNumberOfElements(array, x) {
+    checkIfArray(array);
+
+    if (x < 0) {
+        throw TypeError("X must be equal to or greater than 0.");
+    }
+
+    return array.length === x;
+};
+
+export function checkIfArrayHasXNumberOfElements(array, x) {
+    if (arrayHasXNumberOfElements(array, x) === false) {
+        throw Error("The given array does not have " + x + " element(s)");
+    }
+};
+
+
+
 export function isKeyValueObject(arg) {
     return arg.constructor === Object && isClass(arg) === false;
 };
