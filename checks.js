@@ -33,3 +33,17 @@ export function checkIfPositiveNumber(arg) {
         throw TypeError("Not a positive number.");
     }
 };
+
+
+
+export function isNegativeNumber(arg) {
+    return arg < 0;
+};
+
+export function checkIfNegativeNumber(arg) {
+    checkIfNumber(arg);
+
+    if (isNegativeNumber(arg) === false) {
+        throw TypeError("Not a negative number.");
+    }
+};
