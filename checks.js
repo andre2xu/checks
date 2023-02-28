@@ -125,3 +125,15 @@ export function checkIfInstanceOf(arg, parent_class) {
         throw TypeError("Not an instance of " + class_name);
     }
 };
+
+
+
+export function isArray(arg) {
+    return arg.constructor === Array;
+};
+
+export function checkIfArray(arg) {
+    if (isArray(arg) === false) {
+        throw TypeError("Not an array");
+    }
+};
