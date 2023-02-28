@@ -103,3 +103,25 @@ export function checkIfClass(arg) {
         throw TypeError("Not a class");
     }
 };
+
+
+
+export function isInstanceOf(arg, parent_class) {
+    if (isClass(parent_class)) {
+        return arg instanceof parent_class;
+    }
+
+    return false;
+};
+
+export function checkIfInstanceOf(arg, parent_class) {
+    checkIfClass(parent_class);
+
+    if (arg instanceof parent_class === false) {
+        let class_name = parent_class.toString();
+        class_name = class_name.substr(6);
+        class_name = class_name.substr(0, class_name.indexOf(' '));
+
+        throw TypeError("Not an instance of " + class_name);
+    }
+};
