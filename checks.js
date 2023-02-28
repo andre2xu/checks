@@ -73,3 +73,15 @@ export function checkIfBoolean(arg) {
         throw TypeError("Not a boolean");
     }
 };
+
+
+
+export function isFunction(arg) {
+    return arg instanceof Function;
+};
+
+export function checkIfFunction(arg) {
+    if (isFunction(arg) === false) {
+        throw TypeError("Not a function");
+    }
+};
