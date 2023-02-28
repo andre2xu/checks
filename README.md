@@ -1,0 +1,1 @@
+This is a library that contains helper functions for validating data in JavaScript.
