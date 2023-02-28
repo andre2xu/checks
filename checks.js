@@ -19,3 +19,17 @@ export function checkIfNumber(arg) {
         throw TypeError("Not a number");
     }
 };
+
+
+
+export function isPositiveNumber(arg) {
+    return arg > 0;
+};
+
+export function checkIfPositiveNumber(arg) {
+    checkIfNumber(arg);
+
+    if (isPositiveNumber(arg) === false) {
+        throw TypeError("Not a positive number.");
+    }
+};
