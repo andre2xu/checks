@@ -149,3 +149,18 @@ export function checkIfKeyValueObject(arg) {
         throw TypeError("Not a key value object");
     }
 };
+
+
+
+export function keyExistsInKeyValueObject(key, obj) {
+    checkIfString(key);
+    checkIfKeyValueObject(obj);
+
+    return obj[key] !== undefined;
+};
+
+export function checkIfKeyExistsInKeyValueObject(key, obj) {
+    if (keyExistsInKeyValueObject(key, obj) === false) {
+        throw ReferenceError(key + " does not exist in the key value object given.");
+    }
+};
