@@ -146,6 +146,6 @@ export function isKeyValueObject(arg) {
 
 export function checkIfKeyValueObject(arg) {
     if (isKeyValueObject(arg) === false) {
-        throw TypeError("Not an object");
+        throw TypeError("Not a key value object");
     }
 };
