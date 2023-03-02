@@ -2,50 +2,50 @@
 This is a library that contains helper functions for validating data in JavaScript. The functions that start with ***is*** return a bool and those that start with ***check*** throw an error.<br><br>
 
 ### Data Structures:
-isArray( )<br>
-checkIfArray( )<br><br>
+isArray( arg )<br>
+checkIfArray( arg )<br><br>
 
-arrayHasXNumberOfElements( )<br>
-checkIfArrayHasXNumberOfElements( )<br><br>
+arrayHasXNumberOfElements( array, x )<br>
+checkIfArrayHasXNumberOfElements( array, x )<br><br>
 
-isKeyValueObject( )<br>
-checkIfKeyValueObject( )<br><br>
+isKeyValueObject( arg )<br>
+checkIfKeyValueObject( arg )<br><br>
 
-keyExistsInKeyValueObject( )<br>
-checkIfKeyExistsInKeyValueObject( )<br><br><br>
+keyExistsInKeyValueObject( key, obj )<br>
+checkIfKeyExistsInKeyValueObject( key, obj )<br><br><br>
 
 
 
 ### Numbers:
-isNumber( )<br>
-checkIfNumber( )<br><br>
+isNumber( arg )<br>
+checkIfNumber( arg )<br><br>
 
-isPositiveNumber( )<br>
-checkIfPositiveNumber( )<br><br>
+isPositiveNumber( arg )<br>
+checkIfPositiveNumber( arg )<br><br>
 
-isNegativeNumber( )<br>
-checkIfNegativeNumber( )<br><br>
+isNegativeNumber( arg )<br>
+checkIfNegativeNumber( arg )<br><br>
 
-isZero( )<br>
-checkIfZero( )<br><br><br>
+isZero( arg )<br>
+checkIfZero( arg )<br><br><br>
 
 
 
 ### Primitives:
-isBoolean( )<br>
-checkIfBoolean( )<br><br><br>
+isBoolean( arg )<br>
+checkIfBoolean( arg )<br><br><br>
 
 
 
 ### Non-primitives:
-isString( )<br>
-checkIfString( )<br><br>
+isString( arg )<br>
+checkIfString( arg )<br><br>
 
-isFunction( )<br>
-checkIfFunction( )<br><br>
+isFunction( arg )<br>
+checkIfFunction( arg )<br><br>
 
-isClass( )<br>
-checkIfClass( )<br><br>
+isClass( arg )<br>
+checkIfClass( arg )<br><br>
 
-isInstanceOf( )<br>
-checkIfInstanceOf( )<br><br>
+isInstanceOf( arg, parent_class  )<br>
+checkIfInstanceOf( arg, parent_class )<br><br>
