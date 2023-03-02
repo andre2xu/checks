@@ -1,5 +1,5 @@
 # Checks.js
-This is a library that contains helper functions for validating data in JavaScript. The functions that start with ***is*** return a bool and those that start with ***checkIf*** throw an error. See 'core' for reference.<br><br> 
+This is a module that contains helper functions for validating data in JavaScript. The functions that start with ***is*** return a bool and those that start with ***checkIf*** throw an error. See 'core' for reference.<br><br> 
 
 ## Example:
 ```javascript
