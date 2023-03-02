@@ -1,4 +1,7 @@
-import { checkIfString } from './primitives.js';
+import {
+    checkIfString,
+    isClass
+} from './non_primitives.js';
 
 
 
