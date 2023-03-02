@@ -30,7 +30,10 @@ checkIfZero( arg )<br><br><br>
 
 ### Primitives:
 isBoolean( arg )<br>
-checkIfBoolean( arg )<br><br><br>
+checkIfBoolean( arg )<br><br>
+
+isFloatingPoint( arg )<br>
+checkIfFloatingPoint( arg )<br><br><br>
 
 
 
