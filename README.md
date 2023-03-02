@@ -27,4 +27,25 @@ isNegativeNumber( )<br>
 checkIfNegativeNumber( )<br><br>
 
 isZero( )<br>
-checkIfZero( )<br><br>
+checkIfZero( )<br><br><br>
+
+
+
+### Primitives:
+isBoolean( )<br>
+checkIfBoolean( )<br><br><br>
+
+
+
+### Non-primitives:
+isString( )<br>
+checkIfString( )<br><br>
+
+isFunction( )<br>
+checkIfFunction( )<br><br>
+
+isClass( )<br>
+checkIfClass( )<br><br>
+
+isInstanceOf( )<br>
+checkIfInstanceOf( )<br><br>
