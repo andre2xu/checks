@@ -10,6 +10,20 @@ export function checkIfString(arg) {
 
 
 
+export function isEmptyString(arg) {
+    checkIfString(arg);
+
+    return arg.length === 0;
+};
+
+export function checkIfEmptyString(arg) {
+    if (isEmptyString(arg) === false) {
+        throw Error("Not an empty string");
+    }
+};
+
+
+
 export function isFunction(arg) {
     return arg instanceof Function;
 };

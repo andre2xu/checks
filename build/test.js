@@ -575,6 +575,8 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "isString", ()=>isString);
 parcelHelpers.export(exports, "checkIfString", ()=>checkIfString);
+parcelHelpers.export(exports, "isEmptyString", ()=>isEmptyString);
+parcelHelpers.export(exports, "checkIfEmptyString", ()=>checkIfEmptyString);
 parcelHelpers.export(exports, "isFunction", ()=>isFunction);
 parcelHelpers.export(exports, "checkIfFunction", ()=>checkIfFunction);
 parcelHelpers.export(exports, "isClass", ()=>isClass);
@@ -586,6 +588,13 @@ function isString(arg) {
 }
 function checkIfString(arg) {
     if (isString(arg) === false) throw TypeError("Not a string");
+}
+function isEmptyString(arg) {
+    checkIfString(arg);
+    return arg.length === 0;
+}
+function checkIfEmptyString(arg) {
+    if (isEmptyString(arg) === false) throw Error("Not an empty string");
 }
 function isFunction(arg) {
     return arg instanceof Function;
