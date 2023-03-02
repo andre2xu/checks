@@ -41,6 +41,10 @@ checkIfFloatingPoint( arg )<br><br><br>
 isString( arg )<br>
 checkIfString( arg )<br><br>
 
+isEmptyString( arg )<br>
+checkIfEmptyString( arg )<br><br>
+
+
 isFunction( arg )<br>
 checkIfFunction( arg )<br><br>
 
