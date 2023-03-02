@@ -1,7 +1,7 @@
-import * as data_struct_checks from './data_structures.js';
-import * as non_prim_checks from './non_primitives.js';
-import * as num_checks from './numbers.js';
-import * as prim_checks from './primitives.js';
+import * as data_struct_checks from './core/data_structures.js';
+import * as non_prim_checks from './core/non_primitives.js';
+import * as num_checks from './core/numbers.js';
+import * as prim_checks from './core/primitives.js';
 
 
 
