@@ -558,9 +558,7 @@ function hmrAccept(bundle, id) {
 
 },{}],"c3nwY":[function(require,module,exports) {
 var _checksJs = require("../checks.js");
-window.addEventListener("load", function() {
-    console.log((0, _checksJs.checks).isString(""));
-});
+window.addEventListener("load", function() {});
 
 },{"../checks.js":"aUOhJ"}],"aUOhJ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -652,11 +650,61 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "isBoolean", ()=>isBoolean);
 parcelHelpers.export(exports, "checkIfBoolean", ()=>checkIfBoolean);
+parcelHelpers.export(exports, "isFloatingPoint", ()=>isFloatingPoint);
+parcelHelpers.export(exports, "checkIfFloatingPoint", ()=>checkIfFloatingPoint);
+var _numbersJs = require("./numbers.js");
 function isBoolean(arg) {
     return typeof arg === "boolean";
 }
 function checkIfBoolean(arg) {
     if (isBoolean(arg) === false) throw TypeError("Not a boolean");
+}
+function isFloatingPoint(arg) {
+    (0, _numbersJs.checkIfNumber)(arg);
+    if (arg % 1 !== 0) return true;
+    return false;
+}
+function checkIfFloatingPoint(arg) {
+    if (isFloatingPoint(arg) === false) throw TypeError("Not a floating point number");
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./numbers.js":"1JNZf"}],"1JNZf":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "isNumber", ()=>isNumber);
+parcelHelpers.export(exports, "checkIfNumber", ()=>checkIfNumber);
+parcelHelpers.export(exports, "isPositiveNumber", ()=>isPositiveNumber);
+parcelHelpers.export(exports, "checkIfPositiveNumber", ()=>checkIfPositiveNumber);
+parcelHelpers.export(exports, "isNegativeNumber", ()=>isNegativeNumber);
+parcelHelpers.export(exports, "checkIfNegativeNumber", ()=>checkIfNegativeNumber);
+parcelHelpers.export(exports, "isZero", ()=>isZero);
+parcelHelpers.export(exports, "checkIfZero", ()=>checkIfZero);
+function isNumber(arg) {
+    return typeof arg === "number";
+}
+function checkIfNumber(arg) {
+    if (isNumber(arg) === false) throw TypeError("Not a number");
+}
+function isPositiveNumber(arg) {
+    return arg > 0;
+}
+function checkIfPositiveNumber(arg) {
+    checkIfNumber(arg);
+    if (isPositiveNumber(arg) === false) throw TypeError("Not a positive number.");
+}
+function isNegativeNumber(arg) {
+    return arg < 0;
+}
+function checkIfNegativeNumber(arg) {
+    checkIfNumber(arg);
+    if (isNegativeNumber(arg) === false) throw TypeError("Not a negative number.");
+}
+function isZero(arg) {
+    return arg === 0;
+}
+function checkIfZero(arg) {
+    checkIfNumber(arg);
+    if (isZero(arg) === false) throw TypeError("Not zero");
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1qVQH":[function(require,module,exports) {
@@ -700,45 +748,6 @@ function checkIfKeyExistsInKeyValueObject(key, obj) {
     if (keyExistsInKeyValueObject(key, obj) === false) throw ReferenceError(key + " does not exist in the key value object given.");
 }
 
-},{"./non_primitives.js":"kwlJS","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1JNZf":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "isNumber", ()=>isNumber);
-parcelHelpers.export(exports, "checkIfNumber", ()=>checkIfNumber);
-parcelHelpers.export(exports, "isPositiveNumber", ()=>isPositiveNumber);
-parcelHelpers.export(exports, "checkIfPositiveNumber", ()=>checkIfPositiveNumber);
-parcelHelpers.export(exports, "isNegativeNumber", ()=>isNegativeNumber);
-parcelHelpers.export(exports, "checkIfNegativeNumber", ()=>checkIfNegativeNumber);
-parcelHelpers.export(exports, "isZero", ()=>isZero);
-parcelHelpers.export(exports, "checkIfZero", ()=>checkIfZero);
-function isNumber(arg) {
-    return typeof arg === "number";
-}
-function checkIfNumber(arg) {
-    if (isNumber(arg) === false) throw TypeError("Not a number");
-}
-function isPositiveNumber(arg) {
-    return arg > 0;
-}
-function checkIfPositiveNumber(arg) {
-    checkIfNumber(arg);
-    if (isPositiveNumber(arg) === false) throw TypeError("Not a positive number.");
-}
-function isNegativeNumber(arg) {
-    return arg < 0;
-}
-function checkIfNegativeNumber(arg) {
-    checkIfNumber(arg);
-    if (isNegativeNumber(arg) === false) throw TypeError("Not a negative number.");
-}
-function isZero(arg) {
-    return arg === 0;
-}
-function checkIfZero(arg) {
-    checkIfNumber(arg);
-    if (isZero(arg) === false) throw TypeError("Not zero");
-}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["fmusD","c3nwY"], "c3nwY", "parcelRequire94c2")
+},{"./non_primitives.js":"kwlJS","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["fmusD","c3nwY"], "c3nwY", "parcelRequire94c2")
 
 //# sourceMappingURL=test.js.map
